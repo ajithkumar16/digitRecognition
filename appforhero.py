@@ -32,8 +32,8 @@ def submit_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             captions=gc.generate_captions(static_dir+filename)
             cap={"captions":captions}
-            with open("text/data.json","w") as fjson:
-                        json.dump(cap,fjson)
+#             with open("text/data.json","w") as fjson:
+#                         json.dump(cap,fjson)
             #flash(cap)
             return render_template("index.html", prediction = cap, img_path = "images/test.jpg")
 
