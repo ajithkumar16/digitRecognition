@@ -35,7 +35,7 @@ def submit_file():
 #             with open("text/data.json","w") as fjson:
 #                         json.dump(cap,fjson)
             #flash(cap)
-            return render_template("index.html", prediction = cap, img_path = "static/test.jpg")
+            return render_template("index.html", prediction = captions, img_path = "static/test.jpg")
 
 @app.route('/result')
 def sendImage():
