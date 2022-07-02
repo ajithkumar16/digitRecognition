@@ -9,7 +9,7 @@ import base64
 import generate_caption as gc
 
 app = Flask(__name__)
-static_dir='images/'
+static_dir='static/'
 filename = "test.jpg"
 
 app.config['UPLOAD_FOLDER'] = static_dir
@@ -35,7 +35,7 @@ def submit_file():
 #             with open("text/data.json","w") as fjson:
 #                         json.dump(cap,fjson)
             #flash(cap)
-            return render_template("index.html", prediction = cap, img_path = "images/test.jpg")
+            return render_template("index.html", prediction = cap, img_path = "static/test.jpg")
 
 @app.route('/result')
 def sendImage():
