@@ -30,7 +30,7 @@ def submit_file():
             return redirect(request.url)
         if file:
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            captions=gc.generate_captions(static_dir+filename)
+            captions=str(gc.generate_captions(static_dir+filename))
             cap={"captions":captions}
 #             with open("text/data.json","w") as fjson:
 #                         json.dump(cap,fjson)
