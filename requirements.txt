@@ -8,4 +8,4 @@ jinja2
 jsonpickle
 gunicorn
 gtts
-cv2
+opencv-python
